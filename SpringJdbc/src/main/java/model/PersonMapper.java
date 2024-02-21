@@ -1,3 +1,10 @@
+/*
+* The 'RowMapper' interface is used in spring JDBC to map rows of a 'ResultSet' to objects of
+* a specific type
+*
+* 'resultSet': The ResultSet containing the data from the database query.
+* 'i': The row number (starting from 0) being mapped.
+* */
 package model;
 
 import org.springframework.jdbc.core.RowMapper;
