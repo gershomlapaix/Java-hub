@@ -1,4 +1,4 @@
-package model;
+package com.lg.model;
 
 public class Person {
     private Long id;

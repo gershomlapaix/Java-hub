@@ -5,13 +5,17 @@
 * 'resultSet': The ResultSet containing the data from the database query.
 * 'i': The row number (starting from 0) being mapped.
 * */
-package model;
+package com.lg.model;
 
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Application configuration file
+ * @author Gershom Nsengiyumva
+ * */
 public class PersonMapper implements RowMapper<Person> {
     public Person mapRow (ResultSet resultSet, int i) throws SQLException{
         Person person = new Person();
