@@ -31,7 +31,7 @@ import javax.sql.DataSource;
  * @author Gershom Nsengiyumva
  * */
 @Configuration
-@ComponentScan("com.lg")
+@ComponentScan("com.lg.spring")
 @PropertySource("classpath:database.properties")
 public class AppConfig {
 
