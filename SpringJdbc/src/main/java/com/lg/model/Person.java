@@ -1,5 +1,8 @@
 package com.lg.model;
 
+/*
+* @author Gershom Nsengiyumva
+* */
 public class Person {
     private Long id;
     private Integer age;
