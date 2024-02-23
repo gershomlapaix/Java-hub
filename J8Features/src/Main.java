@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -53,5 +50,36 @@ public class Main {
         // 2. using method references
         names.sort(String::compareToIgnoreCase);
         System.out.println("\n Sorted names:: " + names);
+
+
+        /* STREAMS */
+        List<Author> authors = new ArrayList<>();
+        authors.add(new Author("Kalim", 3));
+        authors.add(new Author("Mustafi", 5));
+        authors.add(new Author("Mugabo", 2));
+        authors.add(new Author("Mario", 1));
+
+        List<Book> books = new ArrayList<>();
+        books.add(new Book("KKK", 2005, authors.get(0)));
+        books.add(new Book("JJJ", 20010, authors.get(1)));
+        books.add(new Book("LLL", 2005, authors.get(2)));
+        books.add(new Book("LLL", 2008, authors.get(2)));
+
+        /*  print all authors in a books collection who wrote a book after 2005 */
+        System.out.println("\n\n Before streams come::");
+        for(Book book : books){
+            if(book.author != null && book.year > 2005){
+                System.out.println(book.author.name);
+            }
+        }
+
+        /* With streams */
+        System.out.println("\n Using streams::");
+        books.stream()
+                .filter(book -> book.year > 2005)  // get books published after 2005
+                .map(Book::getAuthor)
+                .filter(Objects::nonNull)      // remove null authors from the list
+                .map(Author::getName)
+                .forEach(System.out::println);
     }
 }
