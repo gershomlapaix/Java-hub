@@ -8,7 +8,10 @@
 public class Main {
     public static void main(String[] args) {
 
-        User user = new User.Builder("John", "Doe").build();
+        User user = new User.Builder("John", "Doe")
+                .age(32)
+                .email("user@gmail.com")
+                .build();
 
         System.out.println(user);
     }
