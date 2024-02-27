@@ -3,6 +3,7 @@ package com.nlg.springmvc2.model;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Optional;
 
 
 /* @author Gershom Nsengiyumva */
@@ -69,9 +70,9 @@ public class Developer {
         this.skills = skills;
     }
 
-    public boolean hasSkill(Skill skill){
+    public boolean hasSkill(Optional<Skill> skill){
         return getSkills().stream().
-                anyMatch( containedSkill -> containedSkill.getId() == skill.getId());
+                anyMatch( containedSkill -> containedSkill.getId() == skill.get().getId());
     }
 
     /*
