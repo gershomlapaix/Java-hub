@@ -64,6 +64,7 @@ public class DevelopersController {
             return "redirect:/developer/" + developer.get().getId();
         }
 
+        // otherwise
         model.addAttribute("developers", repository.findAll());
         return "redirect:/developers";
     }

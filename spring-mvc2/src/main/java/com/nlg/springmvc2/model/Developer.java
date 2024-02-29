@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-/* @author Gershom Nsengiyumva */
+/** @author Gershom Nsengiyumva */
 
 @Entity
 public class Developer {

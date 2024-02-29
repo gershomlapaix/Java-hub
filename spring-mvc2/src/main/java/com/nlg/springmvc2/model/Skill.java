@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+/** @author Gershom Nsengiyumva */
 @Entity
 public class Skill {
     @Id
